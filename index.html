@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Reasons Why I Love You</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cover" id="cover">
+    <h1>Kita Mulai Tour Cinta</h1>
+    <button onclick="startTour()">Start</button>
+  </div>
+
+  <div class="container hidden" id="main-content">
+    <h1>7 Reasons Why I Love You</h1>
+    <div class="reason" id="reason">Klik tombol untuk melihat alasannya 💖</div>
+    <button onclick="showNextReason()">Next Reason</button>
+  </div>
+
+  <div class="container hidden" id="scrapbook">
+    <h1>Kenangan Manis Kita 💞</h1>
+    <div class="gallery">
+        <div class="photo-item">
+            <img src="img/1.jpg" alt="Memory 1" />
+            <p class="photo-date">02 November 2024</p>
+          </div>
+          <div class="photo-item">
+            <img src="img/2.jpg" alt="Memory 2" />
+            <p class="photo-date">17 November 2024</p>
+          </div>
+          <div class="photo-item">
+            <img src="img/3.jpg" alt="Memory 3" />
+            <p class="photo-date">22 Maret 2025</p>
+          </div>
+          <div class="photo-item">
+            <img src="img/4.jpg" alt="Memory 4" />
+            <p class="photo-date">06 April 2025</p>
+          </div>
+      <!-- Tambah foto sesuai keinginan -->
+    </div>
+    <button onclick="showGiftBox()">Lihat Hadiah Spesial</button>
+  </div>
+
+  <div class="container hidden" id="giftbox">
+    <h1>Hadiah Spesial untuk Kamu 🎁</h1>
+    <video id="gift-video" controls poster="img/video-thumbnail.jpg" controls>
+      <source src="vid (1) (1) (1).mp4" type="video/mp4" />
+      Browser kamu tidak mendukung pemutar video.
+    </video>
+    <!-- Tombol untuk mulai musik (autoplay kadang butuh klik user dulu) -->
+    <button id="btn-next-from-video" onclick="goToWishlist()">Tulis Wishlist Kamu</button>
+  </div>
+
+  <div class="container hidden" id="wishlist-form">
+    <h1>Tulis Wishlist Kamu 💌</h1>
+    <textarea id="wishlist-input" placeholder="Tulis keinginan kamu satu per baris..."></textarea>
+    <button onclick="submitWishlist()">Simpan Wishlist</button>
+  </div>
+  
+  <!-- Hasil Wishlist -->
+  <div class="container hidden" id="wishlist-result">
+    <h1>Your Wishlist 🌟</h1>
+    <ul id="wishlist-output"></ul>
+    <button onclick="showEnding()">Selesai dan Lihat Pesan Terakhir</button>
+  </div>
+
+  <div class="container hidden" id="ending">
+    <h1 class="infinity-text">I LOVE U INFINITY ♾️</h1>
+  </div>
+
+  <audio id="bg-music" src="Until Found You.mp3" autoplay loop></audio>
+  <div id="emoji-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
